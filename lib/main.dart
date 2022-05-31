@@ -37,7 +37,7 @@ class MyApp extends StatelessWidget {
               ),
               //to give a spacing between two container in the column
               SizedBox(
-                height: 20.0,
+                width: 20.0,
               ),
               Container(
                 color: Colors.red,
