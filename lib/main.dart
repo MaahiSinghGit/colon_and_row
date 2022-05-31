@@ -16,8 +16,15 @@ class MyApp extends StatelessWidget {
           //container can contain only single child
           //Column and row can cointin more than  child
           child: Column(
+            //take a size acording the content avilable inside the column
+            mainAxisSize: MainAxisSize.min,
+            //vertical direction of the content where it should be start
+            verticalDirection: VerticalDirection.down,
+            // if we want to create a spacing between our columns containers
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            // if we want to create a spacing horizontally
+            crossAxisAlignment: CrossAxisAlignment.stretch,
             children: [
-
               Container(
                 color: Colors.blue,
                 height: 100.0,
@@ -27,13 +34,17 @@ class MyApp extends StatelessWidget {
                 width: 100.0,
                 child: Center(child: Text(' Container 1')),
               ),
+              //to give a spacing between two container in the column
+              SizedBox(
+                height: 20.0,
+              ),
               Container(
                 color: Colors.red,
                 height: 100.0,
                 margin: EdgeInsets.only(left: 20, top: 20),
                 //padding tech: inside of the widgets
                 padding: EdgeInsets.all(10), //and all method like as margin
-                width: 100.0,
+                width: 500.0,
                 child: Center(child: Text('Container 2')),
               ),
             ],
